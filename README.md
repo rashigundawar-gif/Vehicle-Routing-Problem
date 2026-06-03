@@ -1,151 +1,180 @@
+Copy-paste this directly into your **README.md**:
+
 # 🚚 Vehicle Routing Problem Solver & Visualizer
 
-A full-stack project to solve and visualize the Vehicle Routing Problem (VRP) using multiple algorithms.
+A modern interactive web application for solving and visualizing the **Vehicle Routing Problem (VRP)** using multiple routing strategies. The project allows users to dynamically create delivery locations, compare routing algorithms, analyze route efficiency, and simulate real-world delivery conditions such as vehicle types, traffic, and weather.
 
-Built with **C++ (Backend)** and **React.js (Frontend)**, this system allows comparative analysis of routing strategies with interactive visualization.
+---
+## 🌐 Live Demo
+
+**Deployed Application:**
+
+[Vehicle Routing Visualizer Live Demo](https://pro-connect-liard.vercel.app/?utm_source=chatgpt.com)
 
 ---
 
-# 🔥 Features
+## ✨ Features
 
-- 🧠 **Multiple Algorithms Implemented**
-  - Nearest Neighbor
-  - Greedy Insertion
-  - Genetic Algorithm
+### 🗺 Dynamic Route Management
 
-- 📊 **Performance Comparison**
-  - Total Distance
-  - Execution Time
-  - Route Efficiency
+* Add customer nodes dynamically
+* Delete customer nodes
+* Interactive route visualization
+* Animated vehicle movement on route
+* Depot (Warehouse) visualization
 
-- 🗺️ **Interactive Visualization**
-  - Graph-based Route Display
-  - Algorithm-wise Route Selection
-  - Animated Path Rendering
+### 🧠 Routing Algorithms
 
-- 🏆 **Best Algorithm Detection**
-  - Automatically identifies the most efficient route
+* Nearest Neighbor
+* Greedy Insertion
+* Genetic Algorithm (Simulated)
 
-- 📁 **JSON Export Support**
-  - Stores route information for frontend visualization
+### 📊 Performance Analytics
+
+* Distance comparison between algorithms
+* Fuel cost comparison
+* Best algorithm detection
+* Route efficiency calculation
+* Delivery statistics dashboard
+
+### 🚚 Vehicle Simulation
+
+Choose different vehicle types:
+
+* 🏍️ Bike
+* 🚗 Car
+* 🚐 Van
+* 🚚 Truck
+
+Each vehicle uses different fuel consumption rates.
+
+### 🌦 Environment Simulation
+
+Simulate real-world delivery conditions:
+
+#### Traffic Levels
+
+* 🚦 Low
+* 🚦 Medium
+* 🚦 High
+
+#### Weather Conditions
+
+* ☀️ Clear
+* 🌧 Rain
+* ⛈ Storm
+
+These factors affect route distance and fuel cost calculations.
+
+### 📈 Interactive Dashboard
+
+* Total Customers
+* Distance Covered
+* Fuel Cost
+* Route Efficiency
+* Delivered Orders
+* Pending Orders
+* Fleet Status
+
+### 📉 Data Visualization
+
+Interactive charts displaying:
+
+* Distance Comparison
+* Fuel Cost Comparison
+* Algorithm Performance Analysis
 
 ---
 
-# 🛠️ Tech Stack
+## 🛠 Tech Stack
 
-| Layer | Technology |
-|---------|------------|
-| Backend | C++ (DSA, Graph Algorithms) |
-| Frontend | React.js |
-| Visualization | SVG + Chart.js |
-| Data Handling | JSON |
-| Build Tools | Vite |
+| Layer            | Technology   |
+| ---------------- | ------------ |
+| Frontend         | React.js     |
+| Charts           | Chart.js     |
+| Styling          | CSS3         |
+| Visualization    | SVG          |
+| State Management | React Hooks  |
+| Deployment       | Vercel       |
+| Version Control  | Git & GitHub |
 
 ---
 
-# 📂 Project Structure
+## 📂 Project Structure
 
-```bash
-Vehicle-Routing-Problem-Solver-Visualizer
+```text
+Vehicle-Routing-Problem/
 │
-├── Backend
-│   ├── main.cpp
-│   ├── Graph.cpp
-│   ├── Graph.h
-│   ├── Node.h
-│   ├── FileHandler.cpp
-│   ├── FileHandler.h
-│   ├── JSONWriter.cpp
-│   ├── JSONWriter.h
-│   └── output.json
-│
-├── Frontend
-│   ├── src
-│   ├── public
-│   ├── package.json
-│   └── vite.config.js
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── GraphView.js
+│   │   │   ├── ResultsPanel.js
+│   │   │   └── Charts.js
+│   │   │
+│   │   ├── style/
+│   │   │   └── theme.css
+│   │   │
+│   │   ├── App.js
+│   │   └── index.js
+│   │
+│   └── package.json
 │
 └── README.md
 ```
 
 ---
 
-# ⚙️ Algorithms Used
+## 🚀 How It Works
 
-## 1️⃣ Nearest Neighbor
-
-Starts from the depot and repeatedly visits the nearest unvisited node.
-
-### Advantages
-- Fast execution
-- Easy implementation
-
-### Limitations
-- May not produce optimal routes
+1. User selects a routing algorithm.
+2. Customer locations are added dynamically.
+3. Vehicle type is selected.
+4. Traffic and weather conditions are applied.
+5. Routes are generated.
+6. Dashboard metrics are updated.
+7. Charts compare algorithm performance.
+8. Animated vehicle traverses the selected route.
 
 ---
 
-## 2️⃣ Greedy Insertion
+## 📊 Metrics Calculated
 
-Builds routes incrementally by inserting nodes at positions causing minimum increase in distance.
+### Distance
 
-### Advantages
-- Better route quality
-- Efficient for medium-sized datasets
+Total distance traveled by selected route.
 
-### Limitations
-- Can get trapped in local optimum
+### Fuel Cost
 
----
+Fuel Cost = Distance × Vehicle Fuel Rate
 
-## 3️⃣ Genetic Algorithm
+### Route Efficiency
 
-Uses evolutionary principles such as selection, crossover, and mutation to optimize routes.
+Efficiency is calculated by comparing the selected route against the longest generated route.
 
-### Advantages
-- High-quality solutions
-- Suitable for large datasets
+### Delivery Statistics
 
-### Limitations
-- Higher computation time
+* Total Orders
+* Delivered Orders
+* Pending Orders
 
 ---
 
-# 📈 Performance Metrics
+## 🔮 Future Enhancements
 
-The system compares algorithms based on:
-
-- Total Distance Travelled
-- Execution Time
-- Route Cost
-- Solution Quality
-
----
-
-# 🎯 How It Works
-
-1. User enters locations/nodes.
-2. Backend creates graph representation.
-3. Selected algorithm computes optimized routes.
-4. Results are exported to JSON.
-5. React frontend visualizes routes.
-6. Performance statistics are displayed.
-7. Best-performing algorithm is highlighted.
+* Real Genetic Algorithm implementation
+* Real Nearest Neighbor implementation
+* Multi-Vehicle Routing
+* Export Route as JSON/CSV
+* Dark Mode
+* Route Drag & Drop
+* Real Map Integration
+* Backend API Integration
+* Route Optimization using AI
 
 ---
 
-# 🔮 Future Enhancements
-
-- Multi-Vehicle Support
-- Time Window Constraints
-- Real Map Integration
-- AI-Based Route Prediction
-- Live Traffic Data Integration
-- Fleet Management Dashboard
-
----
-
-# 👨‍💻 Author
+## 👨‍💻 Author
 
 **Rashi Gundawar**
 
