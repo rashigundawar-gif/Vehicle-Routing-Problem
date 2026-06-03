@@ -149,4 +149,4 @@ The system compares algorithms based on:
 
 **Rashi Gundawar**
 
-Built with ❤️ using C++, React.js, Graph Algorithms, and Data Structures.
+Built using C++, React.js, Graph Algorithms, and Data Structures.
